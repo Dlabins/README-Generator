@@ -1,59 +1,82 @@
+// Import Inquirer
 const inquirer = require("inquirer")
+// Import fs
 const fs = require("fs")
+// Import util 
 const util = require("util")
+// Import generateMarkdown.js file
+const generateMarkdown = require("./utils/generateMarkdown.js")
 
 
 // array of questions for user
 const questions = [{
     type: "input",
     message: "What would you like to name your project?",
-    name: "Project Title"
+    name: "title"
 },
 {
     type: "input",
     message: "Briefly describe your project",
-    name: "Project Description"  
+    name: "description"  
 },
 {
     type: "input",
     message: "What would you like to include in the Table of Contents",
-    name: "Project Table of Contents"
+    name: "table of Contents"
 },
 {
     type: "input",
     message: "What are the steps required to install this project?",
-    name: "Project Installation"
+    name: "installation"
 },
 {
     type: "input",
     message: "Add instructions for how the project is used and provide an example of the project in use",
-    name: "Project Usage"
+    name: "usage"
 },
 {
     type: "list",
     message: "Which license will be used for this project?",
     choices: ["MIT", "GNU", "Apache", "Mozilla"],
-    name: "Project License"
+    name: "license"
 },
 {
     type: "input",
     message: "What would you like other developers to contribute to the project?",
-    name: "Project Contributions"
+    name: "contributions"
 },
 {
     type: "input",
     message: "Please add instructions on how to run the tests written in the project",
-    name: "Project Test"
+    name: "test"
+},
+{
+    type: "input",
+    message: "Please enter your Github username!",
+    name: "questionsGithub"
+},
+{
+    type: "input",
+    message: "Please enter your email address!",
+    name: "questionsEmail"
 },
 ];
 
 // function to write README file
 function writeToFile(fileName, data) {
-}
+    fs.writeFile(fileName, data, err => {
+        if (err){
+            return console.log("Error!")
+        }
+        else {
+            console.log("Congrats! The README has been created")
+        };
+    });
 
+}
 // function to initialize program
 function init() {
-
+writeToFile("NodeREADME.md");
 }
 
 // function call to initialize program
