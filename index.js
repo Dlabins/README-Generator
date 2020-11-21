@@ -76,7 +76,10 @@ function writeToFile(fileName, data) {
 }
 // function to initialize program
 function init() {
-writeToFile("NodeREADME.md");
+    inquirer.prompt(questions).then ((data) =>{
+        const generate = generateMarkdown(data)
+        writeToFile("NodeREADME.md", generate);
+    })
 }
 
 // function call to initialize program

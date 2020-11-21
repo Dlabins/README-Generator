@@ -1,4 +1,4 @@
-// function to generate markdown for README
+// function to generate markdown for README with table of contents 
 function generateMarkdown(data) {
   return `# ${data.title}
   ## Table of Contents
