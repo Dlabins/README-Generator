@@ -9,7 +9,7 @@
   - [Questions](#questions)
 
   ## Description
-  undefined
+  The project aims to create a node command line application to make good README files.
   ## Installation
   npm install
   ## Usage
