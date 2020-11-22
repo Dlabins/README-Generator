@@ -11,7 +11,7 @@ function generateMarkdown(data) {
   - [Questions](#questions)
 
   ## Description
-  ${data.descriptions}
+  ${data.description}
   ## Installation
   ${data.installation}
   ## Usage
