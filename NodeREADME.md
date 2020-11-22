@@ -23,5 +23,5 @@
   ## Questions
   You can get in touch with me on Github at https://github.com/Dlabins.
   If you would like to reach me via email, please send a message to dlabins1895@gmail.com.
-  ![snapshot](assets/readmegenerator.png)
+  ![snapshot](assets/readme.png)
  
